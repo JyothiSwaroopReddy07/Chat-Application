@@ -8,12 +8,17 @@ import messageRoutes from "./routes/messages.js";
 import chatroomRoutes from "./routes/chatrooms.js";
 import http from "http";
 import { Server } from "socket.io";
+import  path from "path";
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 
 /* App Config */
 const app = express();
 const port = process.env.PORT || 5000;
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '\config.env') })
 
 /* Middleware -> Deals the Connections between database and the App */
 app.use(express.json());

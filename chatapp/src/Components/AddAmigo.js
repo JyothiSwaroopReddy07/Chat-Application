@@ -8,7 +8,7 @@ function AddAmigo({addchattoggler,addchattoggle}) {
     const [amigousername, setAmigoUsername] = useState()
     const { user } = useContext(AuthContext)
 
-    const API_URL = process.env.REACT_APP_API_URL
+    const API_URL = "http://localhost:5000/";
 
     const handleSubmit = async (e) => {
         e.preventDefault()
