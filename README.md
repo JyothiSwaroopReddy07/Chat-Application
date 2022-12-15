@@ -1,1 +1,1 @@
-It is mern stack Application to create an mimic of chat Application.
+It is mern stack project on chat Applications.
